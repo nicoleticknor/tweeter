@@ -27,3 +27,7 @@ button {
   justify-content: space-between;
   font-family: 'Bungee', sans-serif;
 }
+
+.text-red {
+  color: red;
+}
