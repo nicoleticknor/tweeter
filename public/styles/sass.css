@@ -1,0 +1,85 @@
+.new-tweet label {
+  font-weight: bold; }
+
+.new-tweet textarea {
+  resize: none;
+  font-size: 0.75em;
+  width: 100%;
+  background-color: #ede193;
+  /* change this to body bkgrnd*/
+  border-bottom-color: black;
+  border-bottom-width: 4px;
+  overflow: auto;
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none; }
+
+.new-tweet button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 7px 10px; }
+
+.new-tweet .prompt-footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', sans-serif; }
+
+.new-tweet .text-red {
+  color: red; }
+
+.body-header {
+  height: 400px;
+  top: 120px;
+  position: relative;
+  background-color: #98d6a8;
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png"); }
+  .body-header .center {
+    position: relative;
+    display: flex;
+    justify-content: center; }
+
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px; }
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+body {
+  font-family: "Source Sans Pro", sans-serif; }
+
+main {
+  position: relative;
+  top: 120px;
+  /* there's a better way*/
+  /* background-color: #f4f1ec; change it back to this */
+  background-color: #ede193;
+  margin: 0 auto;
+  width: 90%; }
+
+nav {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  z-index: 100;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em; }
+  nav span {
+    font-family: 'Bungee', sans-serif; }
