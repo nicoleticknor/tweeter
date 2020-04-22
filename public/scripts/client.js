@@ -1,6 +1,15 @@
+const escape = function (str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+// TODO adjust this func so it says months, days, years, hours, minutes, etc
 const createTweetElement = (tweet) => {
   const now = Date.now();
   const daysAgo = Math.floor((now - tweet.created_at) / (1000 * 60 * 60 * 24));
+  // TODO add if statement here
+
   const markup = `<article>
       <header class="tweet-header">
         <div class="user-and-logo">
@@ -10,7 +19,7 @@ const createTweetElement = (tweet) => {
         <span class="tweeter-handle">${tweet.user.handle}</span>
       </header>
       <div class="tweet-body">
-        <p class="tweet-message">${tweet.content.text}</p>
+        <p class="tweet-message">${escape(tweet.content.text)}</p>
       </div>
       <footer>
         <span for="datestamp">${daysAgo} days ago</span>
@@ -21,34 +30,58 @@ const createTweetElement = (tweet) => {
           <i class="fontAwesomeIconNull fas fa-flag"></i>
           <i class="fontAwesomeIconSmall fas fa-heart"></i>
           </span>
-      </footer>`
+      </footer>`;
   return markup;
 };
 
 $(document).ready(function () {
   const allTweets = $('.all-tweets');
+
   const renderTweets = function (tweets) {
+    allTweets.empty();
     tweets.forEach(tweet => {
       let markup = createTweetElement(tweet);
       allTweets.prepend(markup);
-    })
-  }
-
-  $('.post-tweet').submit(function (e) {
-    e.preventDefault();
-    const postTweet = $(this).serialize();
-    $.post('/tweets/', postTweet)
-      .then(() => {
-        console.log(postTweet)
-      })
-  });
+    });
+  };
 
   const loadTweets = () => {
     $.get('/tweets/')
       .then((res) => {
-        renderTweets(res)
-      })
-  }
+        renderTweets(res);
+      });
+  };
   loadTweets();
 
+  const $form = $('.post-tweet');
+
+  $form.submit(function (e) {
+    e.preventDefault();
+
+    const $formInput = $('#tweet-text');
+    const $tweet = $formInput.val();
+    const $errorNoText = $('.error-no-text');
+    const $errorOver140 = $('.error-over-140');
+    const self = this;
+
+
+    if ($tweet === '') {
+      $errorNoText.slideDown("slow", () => {
+        $(self)[0].reset();
+      });
+    }
+    if ($tweet.length > 140) {
+      $errorOver140.slideDown("slow", () => {
+        $(self)[0].reset();
+      });
+    }
+
+
+    const $postTweet = $(this).serialize();
+    $.post('/tweets/', $postTweet)
+      .then(() => {
+        $(self)[0].reset();
+        loadTweets();
+      });
+  });
 });

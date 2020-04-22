@@ -29,6 +29,28 @@
 .new-tweet .text-red {
   color: red; }
 
+.new-tweet .error-no-text {
+  display: none;
+  border: solid 4px red;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 40px; }
+  .new-tweet .error-no-text span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+
+.new-tweet .error-over-140 {
+  display: none;
+  border: solid 4px red;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 40px; }
+  .new-tweet .error-over-140 span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -113,7 +135,9 @@ nav {
     background-color: #e8e8e8;
     margin: 20px 10px 0px 10px;
     height: 100px;
-    line-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-bottom: 4px solid #495464; }
     .all-tweets article .tweet-body .tweet-message {
       margin: 0 auto;
@@ -127,6 +151,11 @@ nav {
     width: 93%;
     display: flex;
     justify-content: space-between; }
+
+.fontAwesomeIcon {
+  font-size: 45px;
+  color: red;
+  padding-right: 20px; }
 
 .fontAwesomeIconSmall {
   color: #bbbfca; }

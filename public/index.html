@@ -39,6 +39,14 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="error-no-text">
+          <span>
+          <p><i class="fontAwesomeIcon fas fa-exclamation-circle"></i>Oops! Please enter some text before Tweeting.</p></span>
+        </div>
+        <div class="error-over-140">
+          <span>
+          <p><i class="fontAwesomeIcon fas fa-exclamation-circle"></i>Oops! Your Tweet must be less than 140 characters long.</p></span>
+        </div>
         <form class="post-tweet" action="/tweets/" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" input="text"></textarea>
