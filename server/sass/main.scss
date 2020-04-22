@@ -1,5 +1,7 @@
 @import 'components/new-tweet.scss';
 
+@import 'base/base.scss';
+
 @import 'components/header.scss';
 
 @import 'components/layout.scss';
@@ -9,3 +11,5 @@
 @import 'components/all-tweets.scss';
 
 @import 'components/util.scss';
+
+@import 'abstract/variables.scss';

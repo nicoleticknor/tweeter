@@ -28,13 +28,12 @@
     </nav>
 
     <header class="body-header">
-      <!--make this better in header.css-->
       <div class="center">
         <img src="/images/profile-hex.png">
       </div>
       <br>
       <div class="center">
-        <h2>Your Name</h2>
+        <h2>Astro Domine</h2>
       </div>
 
     </header>
@@ -42,8 +41,6 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2></h2>
-        <!--should probably fix this with padding-->
         <form action="/tweets/" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" input="text"></textarea>
@@ -58,66 +55,72 @@
       <section class="all-tweets">
         <article>
           <header class="tweet-header">
-            <div>
+            <div class="user-and-logo">
               <i class="fontAwesomeIcon fas fa-crow"></i>
-              <span for="user-name">Firstname Lastname</span>
+              <span>Vera Lynn</span>
             </div>
-            <span class="tweeter-handle">@Nickname</span>
+            <span class="tweeter-handle">@VeraVera</span>
           </header>
 
           <div class="tweet-body">
-            <p class="tweet-message">Hello World!</p>
+            <p class="tweet-message">Does anybody here remember me?</p>
           </div>
 
           <footer>
             <span for="datestamp">5 days ago</span>
             <span for="tweeter-actions">
-                  <i class="fontAwesomeIconSmall fas fa-flag"></i>
-                  <i class="fontAwesomeIconSmall fas fa-retweet"></i>
-                  <i class="fontAwesomeIconSmall fas fa-heart"></i>
+              <i class="fontAwesomeIconSmall fas fa-flag"></i>
+              <i class="fontAwesomeIconNull fas fa-flag"></i>
+              <i class="fontAwesomeIconSmall fas fa-retweet"></i>
+              <i class="fontAwesomeIconNull fas fa-flag"></i>
+              <i class="fontAwesomeIconSmall fas fa-heart"></i>
               </span>
           </footer>
         </article>
         <article>
           <header>
-            <div>
+            <div class="user-and-logo">
               <i class="fontAwesomeIcon fas fa-crow"></i>
-              <span for="user-name">Firstname Lastname</span>
+              <span for="user-name">Lucy Fursam</span>
             </div>
-            <span class="tweeter-handle">@Nickname</span>
+            <span class="tweeter-handle">@HipCatShipCat</span>
           </header>
 
           <div class="tweet-body">
-            <p class="tweet-message">Hello World!</p>
+            <p class="tweet-message">Always by your side</p>
           </div>
 
           <footer>
             <span for="datestamp">10 days ago</span>
             <span for="tweeter-actions">
-                  <i class="fontAwesomeIconSmall fas fa-flag"></i>
-                  <i class="fontAwesomeIconSmall fas fa-retweet"></i>
-                  <i class="fontAwesomeIconSmall fas fa-heart"></i>
+              <i class="fontAwesomeIconSmall fas fa-flag"></i>
+              <i class="fontAwesomeIconNull fas fa-flag"></i>
+              <i class="fontAwesomeIconSmall fas fa-retweet"></i>
+              <i class="fontAwesomeIconNull fas fa-flag"></i>
+              <i class="fontAwesomeIconSmall fas fa-heart"></i>
               </span>
           </footer>
         </article>
         <article>
           <header>
-            <div>
+            <div class="user-and-logo">
               <i class="fontAwesomeIcon fas fa-crow"></i>
-              <span for="user-name">Firstname Lastname</span>
+              <span for="user-name">Floyd Pinkus</span>
             </div>
-            <span class="tweeter-handle">@Nickname</span>
+            <span class="tweeter-handle">@DawnPiper</span>
           </header>
 
           <div class="tweet-body">
-            <p class="tweet-message">Hello World!</p>
+            <p class="tweet-message">I've got the obligatory Hendrix perm</p>
           </div>
 
           <footer>
             <span for="datestamp">15 days ago</span>
-            <span for="tweeter-actions">
+            <span class="tweeter-actions">
                   <i class="fontAwesomeIconSmall fas fa-flag"></i>
+                  <i class="fontAwesomeIconNull fas fa-flag"></i>
                   <i class="fontAwesomeIconSmall fas fa-retweet"></i>
+                  <i class="fontAwesomeIconNull fas fa-flag"></i>
                   <i class="fontAwesomeIconSmall fas fa-heart"></i>
               </span>
           </footer>

@@ -5,9 +5,8 @@
   resize: none;
   font-size: 0.75em;
   width: 100%;
-  background-color: #ede193;
-  /* change this to body bkgrnd*/
-  border-bottom-color: black;
+  background-color: #e8e8e8;
+  border-bottom-color: #495464;
   border-bottom-width: 4px;
   overflow: auto;
   outline: none;
@@ -16,29 +15,19 @@
   border-top: none; }
 
 .new-tweet button {
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #495464;
+  color: #f4f4f2;
   padding: 7px 10px; }
 
 .new-tweet .prompt-footer {
   display: flex;
   justify-content: space-between;
-  font-family: 'Bungee', sans-serif;
+  color: #495464;
+  font-family: "Bungee", sans-serif;
   padding-bottom: 20px; }
 
 .new-tweet .text-red {
   color: red; }
-
-.body-header {
-  height: 400px;
-  top: 120px;
-  position: relative;
-  background-color: #98d6a8;
-  background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png"); }
-  .body-header .center {
-    position: relative;
-    display: flex;
-    justify-content: center; }
 
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
@@ -46,7 +35,8 @@
  * Do not modify these two selectors, please
  */
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 62.5%; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -55,22 +45,33 @@ html {
  * Global layout stuff
  */
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: #495464;
+  background-color: #e8e8e8;
   font-size: 24px; }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+.body-header {
+  height: 400px;
+  top: 120px;
+  position: relative;
+  color: #e8e8e8;
+  background-color: #bbbfca;
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png"); }
+  .body-header .center {
+    position: relative;
+    display: flex;
+    justify-content: center; }
+
 body {
   font-family: "Source Sans Pro", sans-serif; }
 
 main {
   position: relative;
   top: 120px;
-  /* there's a better way*/
-  /* background-color: #f4f1ec; change it back to this */
-  background-color: #ede193;
+  padding-top: 28px;
+  background-color: #e8e8e8;
   margin: 0 auto;
   width: 90%; }
 
@@ -79,38 +80,38 @@ nav {
   height: 120px;
   width: 100%;
   z-index: 100;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #495464;
+  color: #f4f4f2;
   padding: 1.5em; }
   nav span {
-    font-family: 'Bungee', sans-serif; }
+    font-family: "Bungee", sans-serif; }
 
 .all-tweets article {
-  border: 4px solid black;
+  border: 4px solid #495464;
   padding-top: 30px;
   margin: 30px 0 0 0;
-  transition: all 0.3s ease-in; }
+  transition: all 0.2s ease-in; }
   .all-tweets article:hover {
     box-shadow: 10px 10px 9px -4px rgba(0, 0, 0, 0.75); }
   .all-tweets article header {
     margin: 0 auto;
-    /* why isn't this centering */
-    background-color: pink;
+    background-color: #e8e8e8;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    .all-tweets article header i {
-      padding: 0 10px 0 20px; }
+    .all-tweets article header .user-and-logo {
+      display: flex;
+      align-items: center; }
     .all-tweets article header .tweeter-handle {
       padding-right: 20px;
-      color: grey;
+      color: #bbbbbe;
       font-weight: bold; }
   .all-tweets article .tweet-body {
-    background-color: green;
+    background-color: #e8e8e8;
     margin: 20px 10px 0px 10px;
     height: 100px;
     line-height: 100px;
-    border-bottom: 4px solid black; }
+    border-bottom: 4px solid #495464; }
     .all-tweets article .tweet-body .tweet-message {
       margin: 0 auto;
       width: 95%; }
@@ -126,7 +127,12 @@ nav {
 
 .fontAwesomeIcon {
   font-size: 45px;
-  color: black; }
+  color: #bbbfca;
+  padding: 0 10px 0 20px; }
 
 .fontAwesomeIconSmall {
-  color: #4056A1; }
+  color: #bbbfca; }
+
+.fontAwesomeIconNull {
+  font-size: 10px;
+  color: #e8e8e8; }

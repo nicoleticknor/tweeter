@@ -8,8 +8,8 @@
     resize: none;
     font-size: 0.75em;
     width: 100%;
-    background-color: #ede193; /* change this to body bkgrnd*/
-    border-bottom-color: black;
+    background-color: #e8e8e8;
+    border-bottom-color: #495464;
     border-bottom-width: 4px;
     overflow: auto;
     outline: none;
@@ -20,15 +20,16 @@
 
 
   button {
-    background-color: #4056A1;
-    color: #FFFFFF;
+    background-color: #495464;
+    color: #f4f4f2;
     padding: 7px 10px;
   }
 
   .prompt-footer {
     display: flex;
     justify-content: space-between;
-    font-family: 'Bungee', sans-serif;
+    color: #495464;
+    font-family: "Bungee", sans-serif;
     padding-bottom: 20px;
   }
   
