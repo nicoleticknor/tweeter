@@ -1,9 +1,11 @@
+@import '../abstracts/_variables.scss';
+
 .body-header {
-  height: 400px;
-  top: 120px;
+  height: 40rem;
+  top: 12rem;
   position: relative;
-  color: #e8e8e8;
-  background-color: #bbbfca;
+  color: $grey;
+  background-color: $slate;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
 
   .center {
@@ -12,3 +14,12 @@
     justify-content: center;
   }
 }
+
+
+// @media only screen and (min-width: 768px) {
+//   .body-header {
+//     position: fixed;
+//     width: 33%;
+//   }
+// }
+

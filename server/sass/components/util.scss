@@ -1,14 +1,16 @@
+@import '../abstracts/_variables.scss';
+
 .fontAwesomeIcon {
-  font-size: 45px;
-  color: red;
-  padding-right: 20px;
+  font-size: 4.5rem;
+  color: $tomato;
+  padding-right: 2rem;
 }
 
 .fontAwesomeIconSmall {
-  color: #bbbfca;
+  color: $slate;
 }
 
 .fontAwesomeIconNull {
-  font-size: 10px;
-  color: #e8e8e8;
+  font-size: 1rem;
+  color: $grey;
 }
