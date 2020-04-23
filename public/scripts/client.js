@@ -35,13 +35,13 @@ const createTweetElement = (tweet) => {
 };
 
 $(document).ready(function () {
-  const allTweets = $('.all-tweets');
+  const $allTweets = $('.all-tweets');
 
   const renderTweets = function (tweets) {
-    allTweets.empty();
+    $allTweets.empty();
     tweets.forEach(tweet => {
       let markup = createTweetElement(tweet);
-      allTweets.prepend(markup);
+      $allTweets.prepend(markup);
     });
   };
 
@@ -63,25 +63,34 @@ $(document).ready(function () {
     const $errorNoText = $('.error-no-text');
     const $errorOver140 = $('.error-over-140');
     const self = this;
+    const $counter = $(this).find('.counter')
 
+    $errorNoText.slideUp();
+    $errorOver140.slideUp();
 
-    if ($tweet === '') {
-      $errorNoText.slideDown("slow", () => {
+    if ($tweet.length === 0) {
+      $errorNoText.slideDown(); ("slow", () => {
         $(self)[0].reset();
       });
+      return;
     }
+
     if ($tweet.length > 140) {
       $errorOver140.slideDown("slow", () => {
         $(self)[0].reset();
       });
+      return;
     }
-
 
     const $postTweet = $(this).serialize();
     $.post('/tweets/', $postTweet)
       .then(() => {
         $(self)[0].reset();
+        $counter.text(140);
         loadTweets();
+      })
+      .catch(err, () => {
+        console.log(err);
       });
   });
 });

@@ -2,7 +2,8 @@ $(document).ready(function () {
   const tweetText = $('#tweet-text');
 
   tweetText.on('input', function () {
-    const $counter = tweetText.siblings().last().children().last();
+    const parent = $(this).parent();
+    const $counter = parent.find('.counter');
     let chars = tweetText.val().length;
     $counter.text(140 - chars);
     if (chars > 140) {
