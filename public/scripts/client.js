@@ -4,27 +4,9 @@ const escape = function (str) {
   return div.innerHTML;
 }
 
-// TODO can the date change be in the reload?
 const createTweetElement = (tweet) => {
   const now = Date.now();
   const daysAgo = Math.floor((now - tweet.created_at) / (1000 * 60 * 60 * 24));
-  // let time = null;
-
-  // if (daysAgo > 29 && daysAgo < 60) {
-  //   time = 'One month ago'
-  // } else if (daysAgo >= 60 && daysAgo < 365) {
-  //   time = Math.floor(daysAgo / 12) + ' months ago';
-  // } else if (daysAgo >= 365 && daysAgo < 730) {
-  //   time = 'Over a year ago'
-  // } else if (daysAgo >= 730) {
-  //   time = Math.floor(daysAgo / 365) + ' years ago';
-  // } else if ((daysAgo * 60) < 1) {
-  //   time = 'Less than an hour ago';
-  // } else {
-  //   time = (daysAgo * 24) + ' hours ago';
-  // }
-  // <span for="datestamp">${time}</span>
-
 
   const markup = `<article>
       <header class="tweet-header">
@@ -39,11 +21,9 @@ const createTweetElement = (tweet) => {
       </div>
       <footer>
       <span for="datestamp">${daysAgo} days ago</span>
-        <span for="tweeter-actions">
+        <div class="tweeter-actions">
           <i class="fontAwesomeIconSmall fas fa-flag"></i>
-          <i class="fontAwesomeIconNull fas fa-flag"></i>
           <i class="fontAwesomeIconSmall fas fa-retweet"></i>
-          <i class="fontAwesomeIconNull fas fa-flag"></i>
           <i class="fontAwesomeIconSmall fas fa-heart"></i>
           </span>
       </footer>`;
@@ -76,19 +56,10 @@ $(document).ready(function () {
     if ($newTwtSection.is(':visible')) {
       $newTwtSection.slideUp();
     } else {
-      $newTwtSection.slideDown(); ("slow", () => { });
+      $newTwtSection.slideDown();
       $('#tweet-text').focus();
     }
   })
-
-  // TODO either implement or remove this button code
-
-  // const $scrollBtn = $('.scroll-btn');
-
-  // window.scroll(() => {
-  //   $scrollBtn.slideUp();
-  // })
-
 
   const $form = $('.post-tweet');
 
@@ -106,12 +77,12 @@ $(document).ready(function () {
     $errorOver140.slideUp();
 
     if ($tweet.length === 0) {
-      $errorNoText.slideDown(); ("slow", () => { });
+      $errorNoText.slideDown();
       return;
     }
 
     if ($tweet.length > 140) {
-      $errorOver140.slideDown("slow", () => { });
+      $errorOver140.slideDown();
       return;
     }
 
@@ -122,8 +93,5 @@ $(document).ready(function () {
         $counter.text(140);
         loadTweets();
       })
-    // .catch(err, () => {
-    //   console.log(err);
-    // });
   });
 });

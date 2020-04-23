@@ -3,20 +3,11 @@
 $font-stack-main: "Source Sans Pro", sans-serif; 
 $font-stack-accent: "Bungee", sans-serif;
 
-// not used
-$stone: #b4b4af;
-$aqua: #bad5dc;
-$off-white: #e3e8ee;
-$light-blue: #d4dfe5;
-$slate: #a5b4b9;
-$yellow: #f4f1ec;
-
 $tomato: #FF6347;
 $navy: #495464;
 $slate: #bbbfca;
 $white: #f4f4f2;
 $grey: #e8e8e8;
-$dark-gray: #bbbbbe; //not used
 
 
 %error-styling {
@@ -35,6 +26,4 @@ $dark-gray: #bbbbbe; //not used
 
 // TODO implement this variable
 
-%btn-hover {
-  box-shadow: 0rem 0rem 2rem 0.3rem rgba(0,0,0,0.75);
-}
+$box-shadow: 0rem 0rem 2rem 0.3rem rgba(0,0,0,0.75);

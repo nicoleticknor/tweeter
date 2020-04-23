@@ -26,6 +26,7 @@
     background-color: $navy;
     color: $white;
     padding: 0.7rem 1rem;
+    cursor: pointer;
   }
 
   .prompt-footer {
@@ -39,9 +40,7 @@
   .text-red {
     color: $tomato;
   }
-
-  // TODO sass 
-  
+ 
   .error-no-text {
     @extend %error-styling;
   }

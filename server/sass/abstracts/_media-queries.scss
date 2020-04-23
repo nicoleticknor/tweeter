@@ -1,8 +1,0 @@
-@mixin scrnBP($breakpoint) {
-
-  @media (max-width: 77rem) { @content };
-
-  @if $breakpoint == desk {
-    @media (min-width: 103rem) { @content };
-  }
-}

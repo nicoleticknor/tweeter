@@ -28,7 +28,8 @@
   .new-tweet button {
     background-color: #495464;
     color: #f4f4f2;
-    padding: 0.7rem 1rem; }
+    padding: 0.7rem 1rem;
+    cursor: pointer; }
   .new-tweet .prompt-footer {
     display: flex;
     justify-content: space-between;
@@ -118,9 +119,6 @@ body {
     flex-direction: row;
     justify-content: center; }
 
-html {
-  font-size: 62.5%; }
-
 body {
   font-family: "Source Sans Pro", sans-serif; }
   body .header-and-main {
@@ -128,6 +126,8 @@ body {
     top: 12rem; }
     body .header-and-main .container {
       position: relative;
+      display: flex;
+      flex-direction: column;
       background-color: #e8e8e8;
       margin: 0 auto;
       width: 90%; }
@@ -135,7 +135,7 @@ body {
 @media only screen and (min-width: 1024px) {
   .header-and-main {
     position: relative;
-    padding: 10rem 4rem;
+    padding: 10rem 4rem 0rem 4rem;
     display: flex; }
     .header-and-main .container {
       padding-left: 7.5rem;
@@ -197,7 +197,7 @@ nav {
   margin-bottom: 3rem;
   transition: all 0.2s ease-in; }
   .all-tweets article:hover {
-    box-shadow: 1rem 1rem 0.9rem -0.4rem rgba(0, 0, 0, 0.75); }
+    box-shadow: 0rem 0rem 2rem 0.3rem rgba(0, 0, 0, 0.75); }
   .all-tweets article header {
     margin: 0 auto;
     background-color: #e8e8e8;
@@ -223,7 +223,8 @@ nav {
     border-bottom: 0.4rem solid #495464; }
     .all-tweets article .tweet-body .tweet-message {
       margin: 0 auto;
-      width: 95%; }
+      width: 95%;
+      overflow-wrap: break-word; }
   .all-tweets article footer {
     height: 4rem;
     line-height: 4rem;
@@ -233,6 +234,11 @@ nav {
     width: 93%;
     display: flex;
     justify-content: space-between; }
+    .all-tweets article footer .tweeter-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 6.5rem; }
 
 .new-tweet .error-no-text, .new-tweet .error-over-140 {
   display: none;

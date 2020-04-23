@@ -10,7 +10,7 @@
     transition: all 0.2s ease-in;
 
     &:hover {
-      box-shadow: 1rem 1rem 0.9rem -0.4rem rgba(0,0,0,0.75);
+      box-shadow: $box-shadow;
     }
 
     header {
@@ -48,6 +48,7 @@
       .tweet-message {
         margin: 0 auto;
         width: 95%;
+        overflow-wrap: break-word;
       }
     }
 
@@ -60,6 +61,13 @@
       width: 93%;
       display: flex;
       justify-content: space-between;
+
+      .tweeter-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 6.5rem;
+      }
     }
   }
 }
