@@ -1,3 +1,5 @@
+// TODO: Remove not used items
+
 $font-stack-main: "Source Sans Pro", sans-serif; 
 $font-stack-accent: "Bungee", sans-serif;
 
@@ -29,4 +31,10 @@ $dark-gray: #bbbbbe; //not used
     flex-direction: row;
     justify-content: center;
   }
+}
+
+// TODO implement this variable
+
+%btn-hover {
+  box-shadow: 0rem 0rem 2rem 0.3rem rgba(0,0,0,0.75);
 }

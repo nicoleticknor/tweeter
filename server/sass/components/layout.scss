@@ -1,26 +1,56 @@
 @import '../abstracts/_variables.scss';
+
+html {
+  font-size: 62.5%;
+}
  
  body {
   font-family: $font-stack-main; 
 
+  .header-and-main {
+    position: relative;
+    top: 12rem;
+
+    .container {
+      position: relative;
+      background-color: $grey;
+      margin: 0 auto;
+      width: 90%;
+    }
+  }
 }
 
-main {
-  position: relative;
-  top: 12rem;
-  padding-top: 2.8rem;
-  background-color: $grey;
-  margin: 0 auto;
-  width: 90%;
+@media only screen and (min-width: 1024px) {
+  .header-and-main {
+    position: relative;
+    padding: 10rem 4rem;
+    display: flex;
+
+    .container {
+      padding-left: 7.5rem;
+      padding-top: 0;
+    }
+  }
 }
+  
 
-// @media only screen and (min-width: 768px) {
+  // TODO either implement or remove this button code
+  // .scroll-btn-span {
 
-//   .all-but-nav {
-//     display: flex;
-//   }
+  //   display: flex;
 
-//   main {
-//     position: static;
-//   }
-// }
+  //   .scroll-btn {
+  //     display: none;
+  //     border-radius: 1rem;
+  //     font-size: 2rem;
+  //     border: none;
+  //     outline: none;
+  //     cursor: pointer;
+  
+  //     &:hover {
+  //       box-shadow: 0rem 0rem 2rem 0.3rem rgba(0,0,0,0.75);
+  //     }
+
+  //   }
+
+  // }

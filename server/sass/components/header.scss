@@ -1,25 +1,36 @@
 @import '../abstracts/_variables.scss';
 
 .body-header {
-  height: 40rem;
-  top: 12rem;
+  height: 400px;
+  width: 100%;
+  margin-bottom: 2.8rem;
   position: relative;
   color: $grey;
   background-color: $slate;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
 
-  .center {
+  .user-styling {
     position: relative;
     display: flex;
     justify-content: center;
+
+    .username {
+      margin: 0;
+    }
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .body-header {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-// @media only screen and (min-width: 768px) {
-//   .body-header {
-//     position: fixed;
-//     width: 33%;
-//   }
-// }
+    .username {
+      margin: 0;
+    }
+
+  }
+}
 
