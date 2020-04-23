@@ -4,26 +4,27 @@ const escape = function (str) {
   return div.innerHTML;
 }
 
+// TODO can the date change be in the reload?
 const createTweetElement = (tweet) => {
   const now = Date.now();
   const daysAgo = Math.floor((now - tweet.created_at) / (1000 * 60 * 60 * 24));
-  let time = null;
-  // TODO add if statement here
+  // let time = null;
 
-  if (daysAgo > 29 && daysAgo < 60) {
-    time = 'One month ago'
-  } else if (daysAgo >= 60 && daysAgo < 365) {
-    time = Math.floor(daysAgo / 12) + ' months ago';
-  } else if (daysAgo >= 365 && daysAgo < 730) {
-    time = 'Over a year ago'
-  } else if (daysAgo >= 730) {
-    time = Math.floor(daysAgo / 365) + ' years ago';
-  } else if ((daysAgo * 60) < 1) {
-    time = 'Less than an hour ago';
-  } else {
-    time = (daysAgo * 24) + ' hours ago';
-  }
-  // <span for="datestamp">${daysAgo} days ago</span>
+  // if (daysAgo > 29 && daysAgo < 60) {
+  //   time = 'One month ago'
+  // } else if (daysAgo >= 60 && daysAgo < 365) {
+  //   time = Math.floor(daysAgo / 12) + ' months ago';
+  // } else if (daysAgo >= 365 && daysAgo < 730) {
+  //   time = 'Over a year ago'
+  // } else if (daysAgo >= 730) {
+  //   time = Math.floor(daysAgo / 365) + ' years ago';
+  // } else if ((daysAgo * 60) < 1) {
+  //   time = 'Less than an hour ago';
+  // } else {
+  //   time = (daysAgo * 24) + ' hours ago';
+  // }
+  // <span for="datestamp">${time}</span>
+
 
   const markup = `<article>
       <header class="tweet-header">
@@ -37,7 +38,7 @@ const createTweetElement = (tweet) => {
         <p class="tweet-message">${escape(tweet.content.text)}</p>
       </div>
       <footer>
-        <span for="datestamp">${time}</span>
+      <span for="datestamp">${daysAgo} days ago</span>
         <span for="tweeter-actions">
           <i class="fontAwesomeIconSmall fas fa-flag"></i>
           <i class="fontAwesomeIconNull fas fa-flag"></i>
@@ -80,6 +81,15 @@ $(document).ready(function () {
     }
   })
 
+  // TODO either implement or remove this button code
+
+  // const $scrollBtn = $('.scroll-btn');
+
+  // window.scroll(() => {
+  //   $scrollBtn.slideUp();
+  // })
+
+
   const $form = $('.post-tweet');
 
   $form.submit(function (e) {
@@ -112,8 +122,8 @@ $(document).ready(function () {
         $counter.text(140);
         loadTweets();
       })
-      .catch(err, () => {
-        console.log(err);
-      });
+    // .catch(err, () => {
+    //   console.log(err);
+    // });
   });
 });

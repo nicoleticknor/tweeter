@@ -32,43 +32,49 @@
       <button class="new-tweet-btn">Write a new Tweet</button>
     </nav>
 
-    <!-- <div class="all-but-nav"> -->
-    <header class="body-header">
-      <div class="center">
-        <img src="/images/profile-hex.png">
-      </div>
-      <br>
-      <div class="center">
-        <h2>Astro Domine</h2>
-      </div>
+    <div class="header-and-main">
 
-    </header>
+      <header class="body-header">
+        <div class="user-styling">
+          <img src="/images/profile-hex.png">
+        </div>
+        <br>
+        <div class="user-styling">
+          <h2 class="username">Astro Domine</h2>
+        </div>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div class="error-no-text">
-          <span>
+      </header>
+
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div class="error-no-text">
+            <span>
           <p><i class="fontAwesomeIcon fas fa-exclamation-circle"></i>Oops! Please enter some Tweet text.</p></span>
-        </div>
-        <div class="error-over-140">
-          <span>
-          <p><i class="fontAwesomeIcon fas fa-exclamation-circle"></i>Oops! Your Tweet must be less than 140 characters long.</p></span>
-        </div>
-        <form class="post-tweet" action="/tweets/" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" input="text"></textarea>
-          <div class="prompt-footer">
-            <button type="submit">Tweet</button>
-            <ouput name="counter" class="counter" for="tweet-text">140</output>
           </div>
-        </form>
-      </section>
+          <div class="error-over-140">
+            <span>
+          <p><i class="fontAwesomeIcon fas fa-exclamation-circle"></i>Oops! Your Tweet must be less than 140 characters long.</p></span>
+          </div>
+          <form class="post-tweet" action="/tweets/" method="POST">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text" input="text"></textarea>
+            <div class="prompt-footer">
+              <button type="submit">Tweet</button>
+              <ouput name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
 
 
-      <section class="all-tweets">
-      </section>
-    </main>
+        <section class="all-tweets">
+        </section>
+
+        <!-- TODO either implement or remove this button code
+
+      <span class="scroll-btn-span"><button class="scroll-btn"><i class="fontAwesomeIcon fas fa-angle-double-up"></i></button></span>-->
+      </main>
+    </div>
     <!-- </div> -->
 
     <!-- App JS -->
