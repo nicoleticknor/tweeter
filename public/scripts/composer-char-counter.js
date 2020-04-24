@@ -12,5 +12,4 @@ $(document).ready(function () {
       $counter.removeClass('text-red');
     }
   });
-
 });

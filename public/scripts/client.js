@@ -1,8 +1,8 @@
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 const createTweetElement = (tweet) => {
   const now = Date.now();
@@ -30,10 +30,10 @@ const createTweetElement = (tweet) => {
   return markup;
 };
 
-$(document).ready(function () {
+$(document).ready(function() {
   const $allTweets = $('.all-tweets');
 
-  const renderTweets = function (tweets) {
+  const renderTweets = function(tweets) {
     $allTweets.empty();
     tweets.forEach(tweet => {
       let markup = createTweetElement(tweet);
@@ -59,11 +59,11 @@ $(document).ready(function () {
       $newTwtSection.slideDown();
       $('#tweet-text').focus();
     }
-  })
+  });
 
   const $form = $('.post-tweet');
 
-  $form.submit(function (e) {
+  $form.submit(function(e) {
     e.preventDefault();
 
     const $formInput = $('#tweet-text');
@@ -71,7 +71,7 @@ $(document).ready(function () {
     const $errorNoText = $('.error-no-text');
     const $errorOver140 = $('.error-over-140');
     const self = this;
-    const $counter = $(this).find('.counter')
+    const $counter = $(this).find('.counter');
 
     $errorNoText.slideUp();
     $errorOver140.slideUp();
@@ -92,6 +92,6 @@ $(document).ready(function () {
         $(self)[0].reset();
         $counter.text(140);
         loadTweets();
-      })
+      });
   });
 });
