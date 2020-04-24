@@ -4,8 +4,9 @@ Tweeter is a simple, single-page Twitter clone that uses HTML, CSS, JS, jQuery, 
 
 ## Screenshots
 
-!["Screenshot of mobile-friendly layout"]()
-!["Screenshot of desktop layout"]()
+!["Desktop layout landing page"]()
+!["Desktop layout with toggled Compose Tweet"]()
+!["Mobile-friendly layout, mid-Tweet"]()
 
 ## Try Out Tweeter
 
